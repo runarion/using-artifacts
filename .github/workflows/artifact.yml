@@ -43,10 +43,10 @@ jobs:
         uses: actions/download-artifact@v5.0.0
         with:
           name: linux
-          path: .
+          path: ./linux
 
       - name: Make binary executable
-        run: chmod +x ./${{ env.FILE_NAME }}
+        run: chmod +x ./linux/${{ env.FILE_NAME }}
 
       - name: Run test script
         run: source ./test.sh
